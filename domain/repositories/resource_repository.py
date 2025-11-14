@@ -1,5 +1,7 @@
 from typing import Dict
-
+from domain.value_objects import ResourceId
+from domain.entities.resource import Resource
+from domain.exceptions import DuplicateResourceError, ResourceNotFoundException
 
 class ResourceRepository:
     """Repository for managing resource persistence"""

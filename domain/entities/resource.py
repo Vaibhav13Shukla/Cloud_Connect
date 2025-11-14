@@ -1,6 +1,8 @@
 from abc import ABC, abstractmethod
 from datetime import datetime
 from typing import Dict, List
+from domain.value_objects import ResourceId
+from domain.states import ResourceState, CreatedState
 
 
 class Resource(ABC):

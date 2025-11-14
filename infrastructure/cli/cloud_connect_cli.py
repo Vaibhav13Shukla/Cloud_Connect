@@ -1,3 +1,8 @@
+from application.services.resource_management_service import ResourceManagementService
+from infrastructure.logging.logger import Logger
+from domain.value_objects import Runtime, Region, EvictionPolicy
+from domain.entities.resource import Resource
+
 class CloudConnectCLI:
     def __init__(self, service: ResourceManagementService, logger: Logger):
         self._service = service

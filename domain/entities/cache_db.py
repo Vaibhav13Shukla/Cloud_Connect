@@ -1,3 +1,7 @@
+from datetime import datetime
+from domain.entities.resource import Resource
+from domain.value_objects import ResourceId, EvictionPolicy
+
 class CacheDB(Resource):
     def __init__(self, resource_id: ResourceId, ttl_seconds: int, capacity_mb: int, eviction_policy: EvictionPolicy):
         if not 1 <= ttl_seconds <= 86400:

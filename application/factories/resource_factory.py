@@ -1,5 +1,10 @@
 from abc import ABC, abstractmethod
 from typing import Dict
+from domain.value_objects import ResourceId
+from domain.entities.resource import Resource
+from domain.entities.app_service import AppService
+from domain.entities.storage_account import StorageAccount
+from domain.entities.cache_db import CacheDB
 
 
 class ResourceFactory(ABC):

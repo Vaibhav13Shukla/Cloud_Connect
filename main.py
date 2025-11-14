@@ -1,3 +1,16 @@
+from infrastructure.logging.logger import Logger
+from domain.repositories.resource_repository import ResourceRepository
+from application.factories.resource_factory import (
+    ResourceFactoryRegistry, 
+    AppServiceFactory, 
+    StorageAccountFactory, 
+    CacheDBFactory
+)
+from application.observers.resource_observer import LoggingObserver
+from application.services.resource_management_service import ResourceManagementService
+from infrastructure.cli.cloud_connect_cli import CloudConnectCLI
+
+
 def main():
     """Bootstrap and run the CloudConnect application"""
     

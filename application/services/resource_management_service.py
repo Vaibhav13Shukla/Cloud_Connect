@@ -1,3 +1,10 @@
+from domain.repositories.resource_repository import ResourceRepository
+from application.factories.resource_factory import ResourceFactoryRegistry
+from application.observers.resource_observer import LoggingObserver
+from domain.value_objects import ResourceId
+from domain.entities.resource import Resource
+from domain.exceptions import DuplicateResourceError
+
 class ResourceManagementService:
     def __init__(self, repository: ResourceRepository, factory_registry: ResourceFactoryRegistry, 
                  logging_observer: LoggingObserver):
